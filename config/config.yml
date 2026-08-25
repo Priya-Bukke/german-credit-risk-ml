@@ -1,8 +1,15 @@
-
 data:
   test_size: 0.2
   random_state: 42
 
-model:
-  max_iter: 1000
-  
+optuna:
+  n_trials: 30
+
+models:
+  - name: logistic_regression
+    search_space:
+      max_iter: [500, 2000]
+  - name: random_forest
+    search_space:
+      n_estimators: [50, 300]
+      max_depth: [3, 20]

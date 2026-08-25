@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/priya/Desktop/german-credit-risk/mlruns/180561587226456404/9c49b2ba97b143c1ab7b5da2c8c1eba8/artifacts
+end_time: 1787655525881
+entry_point_name: ''
+experiment_id: '180561587226456404'
+lifecycle_stage: active
+run_id: 9c49b2ba97b143c1ab7b5da2c8c1eba8
+run_name: logistic_regression
+run_uuid: 9c49b2ba97b143c1ab7b5da2c8c1eba8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1787655525778
+status: 3
+tags: []
+user_id: priya
