@@ -778,7 +778,7 @@ wheels = [
 [[package]]
 name = "german-credit-risk"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "ipykernel" },
@@ -787,7 +787,6 @@ dependencies = [
     { name = "mlflow" },
     { name = "optuna" },
     { name = "pandas" },
-    { name = "protobuf" },
     { name = "pyyaml" },
     { name = "scikit-learn" },
     { name = "setuptools" },
@@ -804,7 +803,6 @@ requires-dist = [
     { name = "mlflow", specifier = ">=2.17,<3" },
     { name = "optuna", specifier = ">=4.9.0" },
     { name = "pandas", specifier = ">=2.2,<3" },
-    { name = "protobuf", specifier = "<5" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "scikit-learn", specifier = ">=1.9.0" },
     { name = "setuptools", specifier = ">=84.0.0" },
