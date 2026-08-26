@@ -70,6 +70,7 @@ def train_model():
     print(f"CV F1: {best_overall['score']:.4f}")
     print(f"Params: {best_overall['params']}")
 
+
     final_model = build_model(best_overall["name"], best_overall["params"])
     final_model.fit(X_train, y_train)
 
@@ -78,6 +79,18 @@ def train_model():
     print("Accuracy:", accuracy_score(y_test, y_pred))
     print(classification_report(y_test, y_pred))
 
+    # Save the winning model + which columns it expects, so predict.py can reuse it later
+    import joblib
+    from src.utils.paths import PROJECT_ROOT
 
+    models_dir = PROJECT_ROOT / "models"
+    models_dir.mkdir(exist_ok=True)
+
+    joblib.dump(final_model, models_dir / "champion_model.pkl")
+    joblib.dump(list(X_encoded.columns), models_dir / "feature_columns.pkl")
+
+    print(f"\nModel saved to {models_dir / 'champion_model.pkl'}")  
+
+    
 if __name__ == "__main__":
     train_model()
