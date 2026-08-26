@@ -70,8 +70,8 @@ uv run python -m src.inference.predict
 - [x] Hyperparameter search
 - [x] Experiment tracking
 - [x] Model persistence + CLI prediction
-- [ ] REST API for serving predictions
-- [ ] Docker containerization
+- [x] REST API for serving predictions
+- [x] Docker containerization
 - [ ] Automated tests + CI
 
 ## Acknowledgments
